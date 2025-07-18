@@ -27,9 +27,34 @@ def load_data():
     col_to_clip = ['daily_cases', 'case_diff', 'dose1_daily', 'dose2_daily', 'dose3_daily']
     ds[col_to_clip] = ds[col_to_clip].clip(lower=0)
     
-    return ds
-
-
+    return ds   
+    
+    
+def change_theme(theme):
+    if theme == '🌙 Dark':
+        st.markdown(
+            """
+            <style>
+                body {
+                    background-color: #0E1117;
+                    color: #FAFAFA;
+                }
+            </style>
+            """, unsafe_allow_html=True
+        )
+    else:
+        st.markdown(
+        """
+        <style>
+        body {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+        
 if __name__ == '__main__':
     # Set-Up Page
     st.set_page_config(page_title='Greek COVID Dashboard', layout='wide')
@@ -37,6 +62,12 @@ if __name__ == '__main__':
     st.markdown('Εξερεύνησε τα δεδομένα COVID-19 στην Ελλάδα.')
     
     ds = load_data()
+    
+    # ===========================
+    # Toggle Dark/Light Mode
+    # ===========================
+    theme_toggle = st.sidebar.radio('🎨 Theme', ['🌙 Dark', '☀️ Light'])
+    change_theme(theme_toggle)
     
     # ===========================
     # Sidebar: Φίλτρα & Εργαλεία
@@ -61,7 +92,7 @@ if __name__ == '__main__':
     start_date, end_date = pd.to_datetime(date_range[0]), pd.to_datetime(date_range[1])
     filtered_ds = filtered_ds[(filtered_ds['date'] >= start_date) & (filtered_ds['date'] <= end_date)]
     if region != 'Όλες':
-        ds = ds[ds['region'] == region]
+        filtered_ds = filtered_ds[filtered_ds['region'] == region]
     
     # ===========================   
     # Κουμπί για Εξαγωγή σε CSV
@@ -92,7 +123,7 @@ if __name__ == '__main__':
     bar_data = filtered_ds.groupby('region')['daily_cases']\
         .sum()\
         .reset_index()\
-        .sort_values('daily_cases', ascending='False')
+        .sort_values('daily_cases', ascending=False)
     
     fig_bar = px.bar(
         bar_data,

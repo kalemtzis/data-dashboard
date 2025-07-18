@@ -65,11 +65,12 @@ streamlit run app.py
 - [Seaborn](https://seaborn.pydata.org/) (προεαιρετικά)
 
 ## Screenshots <a name = "screenshots"></a>
-```markdown
-```
+![Dashboard Screenshot](images/Screenshot%20from%202025-07-18%2021-54-44.png)
+
+![Dashboard Screenshot](images/Screenshot%20from%202025-07-18%2021-54-45.png)
 
 ## 📋 TODO <a name='todo'></a>
-- [ ] Add Screenshots
+- [x] Add Screenshots
 
 ## ✍️ Author <a name = "author"></a>
 

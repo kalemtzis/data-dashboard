@@ -1,0 +1,16 @@
+# Virtual Enviroment
+.dash-env
+
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Logs and Temporary files
+*.log
+*.tmp

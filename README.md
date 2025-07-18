@@ -68,9 +68,7 @@ streamlit run app.py
 ```
 
 ## 📋 TODO <a name='todo'></a>
-```markdown
 - [ ] Add Screenshots
-```
 
 ## ✍️ Author <a name = "author"></a>
 

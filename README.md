@@ -1,22 +1,18 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
-</p>
-
-<h3 align="center">Project Title</h3>
+<h1 align="center">Greek COVID-19 Data Dashboard</h1>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Community-7289da?logo=discord&logoColor=white)]()
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github)](https://github.com/kalemtzis)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> 
+    Διαδραστικό dashboard για την παρακολούθηση και ανάλυση των δεδομένων COVID-19 στην Ελλάδα, βασισμένο σε <b>Streamlit</b>, <b>Pandas</b>, και <b>Plotly</b>.
     <br> 
 </p>
 
@@ -24,91 +20,60 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
+- [Build Using](#built-using)
+- [Screenshots](#screenshots)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Διαδραστικό dashboard για την παρακολούθηση και ανάλυση των δεδομένων COVID-19 στην Ελλάδα, βασισμένο σε **Streamlit**, **Pandas**, και **Plotly**. 
+
+Τα δεδομένα προέρχονται από επίσημες πηγές (π.χ. [data.gov.gr](https://data.gov.gr/)) και περιλαμβάνουν:
+- Ημερήσια κρούσματα
+- Ημερήσιες & συνολικές δόσεις εμβολίων
+- Κατανομή ανά περιοχή και ημερομηνία
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
+Κλωνοποίησε το αποθετήριο:
+```bash
+git clone https://github.com/vasilis-yourusername/covid-dashboard.git
+cd covid-dashboard
 ```
 
-And repeat
+Εγκατάσταση απαιτούμενων βιβλιοθηκών:
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+```bash
+pip install -r requirements.txt
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
+Τρέξε την εφαρμογή:
+```bash
+streamlit run app.py
 ```
-Give an example
-```
-
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
+- [Python 3.8+](https://www.python.org/)
+- [Streamlit](https://streamlit.io/)
+- [Pandas](https://pandas.pydata.org/)
+- [Plotly](https://plotly.com/)
+- [Seaborn](https://seaborn.pydata.org/) (προεαιρετικά)
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+## Screenshots <a name = "screenshots"></a>
+```markdown
+```
 
-## ✍️ Authors <a name = "authors"></a>
+## 📋 TODO <a name='todo'></a>
+```markdown
+- [ ] Add Screenshots
+```
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+## ✍️ Author <a name = "author"></a>
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+- [@kalemtzis](https://github.com/kalemtzis) - Idea & Initial work
+- Email: [b.kalemtzis@gmail.com]()
+- Πτυχιούχος Πληροφορικής - ΑΠΘ
